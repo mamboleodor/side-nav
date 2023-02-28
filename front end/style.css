@@ -1,0 +1,164 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman';
+}
+.header{
+    width: 100%;
+    height: 100vh;
+    background-image: url(images1/background1.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.side-nav{
+    width: 110px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 30px 15px;
+    background: rgba(10, 7, 7, 0.2);
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    transition: width 0.5s;
+}
+.side-nav button{
+    background: #e91e63;
+    color: black;
+    border: 10;
+    outline: 0;
+    border-radius: 50px;
+    padding: 10px 0px;
+    cursor: pointer;
+    position:left;
+}
+.content{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: #000;
+}
+.content h1{
+    font-size: 70px;
+    margin-top: 80px;
+
+}
+.content p{
+    margin: 20px auto;
+    font-weight: 100;
+    line-height: 25px;
+
+}
+button{
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid #e91e63;
+    background: transparent;
+    color: #000;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+span{
+    background: #e91e63;
+    height: 100%;
+    width: 0%;
+    border-radius: 25px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.5s;
+
+}
+button:hover span{
+    width: 100%;
+
+}
+button:hover{
+    border: none;
+}
+.user{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 60px;
+    font-size: 12px;
+    padding: 10px;
+    border-radius: 8px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+}
+.user div{
+    display: none;
+}
+.user h2{
+    font-size: 15px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+.user-img{
+    width:40px;
+    border-radius: 50%;
+    margin: auto;
+}
+.star-img{
+    width: 20px;
+    display: none;
+}
+ul{
+    list-style: none;
+    padding: 0 15px;
+}
+ul li{
+    margin: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+ul li img{
+    width:30px;
+    margin-right: 0px;
+}
+ul li p{
+    white-space: nowrap;
+    display: none;
+}
+.side-nav:hover{
+    width: 250px;
+}
+.side-nav:hover .user div{
+    display:block;
+}.side-nav:hover .user{
+    width:100%;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+}
+.side-nav:hover .star-img{
+    display: block;
+}
+.side-nav:hover .user-img{
+    margin: 0;
+
+}
+.side-nav:hover ul li p{
+    display: block;
+}
+.side-nav:hover ul li img{
+    margin-right: 10px;
+}
+.side-nav:hover ul li{
+    justify-content: flex-start;
+}
